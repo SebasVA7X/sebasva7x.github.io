@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Professional portfolio about data, automation and artificial intelligence." />
+  <title>Sebastian Vaca | Data & AI Portfolio</title>
+
+  <!-- Tipografía -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Accesibilidad: reduce motion -->
+  <style>
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-white text-zinc-900 antialiased selection:bg-black selection:text-white">
+
+  <!-- Skip link -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-black focus:text-white px-4 py-2 rounded">
+    Skip to content
+  </a>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-zinc-200">
+    <nav class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <span class="font-bold text-lg">Sebastian Vaca</span>
+
+      <button id="menu-button"
+        class="md:hidden border border-zinc-400 rounded px-3 py-2 text-sm transition-all"
+        aria-expanded="false">
+        Menú
+      </button>
+
+      <ul class="hidden md:flex gap-6 text-sm font-medium">
+        <li><a href="#about" class="transition-all hover:underline hover:underline-offset-8">About</a></li>
+        <li><a href="#projects" class="transition-all hover:underline hover:underline-offset-8">Projects</a></li>
+        <li><a href="#contact" class="transition-all hover:underline hover:underline-offset-8">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu"
+      class="hidden opacity-0 transition-opacity duration-300 md:hidden border-t border-zinc-200 bg-white">
+      <ul class="px-4 py-4 space-y-3 text-sm">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- Hero -->
+    <section class="max-w-6xl mx-auto px-4 py-24 fade-in opacity-0 translate-y-4 transition-all duration-700">
+      <h1 class="text-4xl md:text-6xl font-bold leading-tight">
+        From raw data to real decisions
+      </h1>
+
+      <p class="mt-6 text-lg text-zinc-700 max-w-2xl">
+        Designing and building data systems, automation pipelines, and AI-powered tools to solve real-world problems.
+      </p>
+
+      <div class="mt-8 flex flex-col sm:flex-row gap-4">
+        <a href="#projects"
+          class="inline-flex items-center justify-center rounded bg-black text-white px-6 py-3 font-semibold transition-all duration-200 hover:bg-zinc-800 hover:scale-[1.02]">
+          See projects
+        </a>
+
+        <a href="#contact"
+          class="inline-flex items-center justify-center rounded border border-zinc-500 px-6 py-3 font-semibold transition-all duration-200 hover:bg-zinc-100 hover:scale-[1.02]">
+          Contact
+        </a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="bg-zinc-50 border-t border-zinc-200">
+      <div class="max-w-6xl mx-auto px-4 py-16 fade-in opacity-0 translate-y-4 transition-all duration-700">
+        <div class="max-w-3xl">
+
+          <h2 class="text-3xl font-bold tracking-tight">
+              About
+            </h2>
+
+            <p class="mt-6 text-lg text-zinc-700 leading-relaxed">
+              Economist and Data & AI Specialist with experience designing and building end-to-end data systems, automation pipelines, and analytics solutions. My work focuses on transforming raw, unstructured data into structured, actionable insights that support real-world decision-making — combining Python, SQL, BI tools, and modern data technologies with practical problem-solving.
+            </p>
+
+            <p class="mt-4 text-lg text-zinc-700 leading-relaxed">
+              Beyond technical implementation, I work with data as an organizational asset: data quality practices, process structuring, and alignment between producers and consumers. I am particularly interested in the intersection of data governance, automation, and analytics, building systems that are not only technically sound but reliable, consistent, and usable across teams.
+            </p>
+
+        </div>    
+      </div>
+    </section>
+
+
+    <!-- Projects -->
+    <section id="projects" class="bg-white border-t border-zinc-200">
+      <div class="max-w-6xl mx-auto px-4 py-16">
+        <h2 class="text-3xl font-bold fade-in opacity-0 translate-y-4 transition-all duration-700">
+          Projects
+        </h2>
+
+        <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+
+          <!-- Card -->
+          <article class="fade-in opacity-0 translate-y-4 transition-all duration-700 bg-white border border-zinc-300 rounded-2xl p-6 shadow-sm hover:shadow-lg hover:-translate-y-1">
+            <h3 class="text-xl font-bold">Job Scout</h3>
+            <p class="mt-3 text-zinc-700">
+              Automated job intelligence system that scrapes, filters, and ranks opportunities using LLM-based scoring and custom pipelines.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="border border-zinc-400 rounded-full px-3 py-1 text-sm">Python</span>
+              <span class="border border-zinc-400 rounded-full px-3 py-1 text-sm">JSON</span>
+              <span class="border border-zinc-400 rounded-full px-3 py-1 text-sm">SQLite</span>
+              <span class="border border-zinc-400 rounded-full px-3 py-1 text-sm">Local LLMs</span>
+              <span class="border border-zinc-400 rounded-full px-3 py-1 text-sm">LLM APIs</span>
+            </div>
+            <a href="https://github.com/SebasVA7X/job_scout" class="mt-6 inline-block font-semibold underline underline-offset-4 transition-all hover:underline-offset-8">
+              See repository 
+            </a>
+          </article>
+
+          <!-- Card -->
+          <article class="fade-in opacity-0 translate-y-4 transition-all duration-700 bg-white border border-zinc-300 rounded-2xl p-6 shadow-sm hover:shadow-lg hover:-translate-y-1">
+            <h3 class="text-xl font-bold">Document Intelligence Pipeline</h3>
+            <p class="mt-3 text-zinc-700">
+              A modular pipeline for extracting, analyzing, and normalizing content from PDF document corpora into structured Excel matrices.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="border border-zinc-400 rounded-full px-3 py-1 text-sm">Python</span>
+              <span class="border border-zinc-400 rounded-full px-3 py-1 text-sm">OCR</span>
+              <span class="border border-zinc-400 rounded-full px-3 py-1 text-sm">JSON</span>
+              <span class="border border-zinc-400 rounded-full px-3 py-1 text-sm">Local LLMs</span>
+              <span class="border border-zinc-400 rounded-full px-3 py-1 text-sm">LLM APIs</span>
+            </div>
+            <a href="https://github.com/SebasVA7X/document_intelligence_pipeline" class="mt-6 inline-block font-semibold underline underline-offset-4 transition-all hover:underline-offset-8">
+              See repository
+            </a>
+          </article>
+
+                    <!-- Card -->
+          <article class="fade-in opacity-0 translate-y-4 transition-all duration-700 bg-white border border-zinc-300 rounded-2xl p-6 shadow-sm hover:shadow-lg hover:-translate-y-1">
+            <h3 class="text-xl font-bold">Refugee and Asylum Network</h3>
+            <p class="mt-3 text-zinc-700">
+              A synthetic data generator that populates a PostgreSQL database modelling a fictional social-services agency's Refugee Status Determination (RSD) workflow taking into consideration ethical data management principles.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="border border-zinc-400 rounded-full px-3 py-1 text-sm">PostgreSQL</span>
+              <span class="border border-zinc-400 rounded-full px-3 py-1 text-sm">Faker (Python)</span>
+            </div>
+            <a href="https://github.com/SebasVA7X/ran_system" class="mt-6 inline-block font-semibold underline underline-offset-4 transition-all hover:underline-offset-8">
+              See repository
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+    
+  </main>
+
+  <!-- Footer -->
+  <footer id="contact" class="bg-black text-white">
+    <div class="max-w-6xl mx-auto px-4 py-10">
+      <h2 class="text-2xl font-bold">Contact</h2>
+      <p class="mt-3 text-zinc-300">
+        Have an idea? I'm available to talk about projects and opportunities in data, BI, and AI. 
+      </p>
+
+      <ul class="mt-6 flex gap-5">
+        <li><a href="https://github.com/SebasVA7X/" class="underline underline-offset-4 hover:underline-offset-8 transition-all">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/sebastian-vaca-028606163/" class="underline underline-offset-4 hover:underline-offset-8 transition-all">LinkedIn</a></li>
+      </ul>
+      
+      <p class="mt-8 text-sm text-zinc-400">
+        © 2026 Sebastian Vaca. Built with HTML & Tailwind CSS.
+      </p>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    // Mobile menu
+    const button = document.getElementById('menu-button');
+    const menu = document.getElementById('mobile-menu');
+
+    button.addEventListener('click', () => {
+      const isOpen = button.getAttribute('aria-expanded') === 'true';
+      button.setAttribute('aria-expanded', String(!isOpen));
+
+      menu.classList.toggle('hidden');
+      setTimeout(() => {
+        menu.classList.toggle('opacity-0');
+      }, 10);
+    });
+
+    // Fade in on scroll
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.remove('opacity-0', 'translate-y-4');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
